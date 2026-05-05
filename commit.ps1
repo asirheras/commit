@@ -1,8 +1,8 @@
 $mensaje = Read-Host "Introduce el mensaje del commit"
 
 if ([string]::IsNullOrWhiteSpace($mensaje)) {
-    Write-Host "Error: el mensaje no puede estar vacío"
-    exit
+    Write-Error "El mensaje no puede estar vacío"
+    exit 1
 }
 
 git add .
